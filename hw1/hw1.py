@@ -26,4 +26,4 @@ for n in [3, 5, 7, 9, 11]:
         score = np.mean(score)
         print("%d folds: %f%% accuracy" % (i, score))
 
-    print " "
+    print "\r"
