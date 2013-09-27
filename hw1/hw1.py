@@ -9,7 +9,7 @@ X = iris.data
 y = iris.target
 
 # Use standard KNN classifier with different n_neighbors
-for n in [3, 5, 7, 9, 11]:
+for n in range(1,20):
                                                           
     knn = KNeighborsClassifier(n_neighbors=n, algorithm='auto')
     print "KNN with %d neighbors" % n
