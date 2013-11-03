@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup as bs
 import requests
 
 for a in range(2005,2013):
-    sleep(1.0)
+    print "...getting projects from %s \n" % str(a)
 
     directory = "data/%s" % str(a)
 
@@ -15,8 +15,9 @@ for a in range(2005,2013):
     soup = bs(data)
 
     for a in soup.find_all("a"):
-        if "pdf" in a["href"]:
-            try:
+        try:
+            if "pdf" in a["href"]:
+                sleep(0.2)
                 href = a.get("href")
                 
                 name = re.sub("http://cs229.stanford.edu/proj", "", href)
@@ -28,5 +29,5 @@ for a in range(2005,2013):
                 with open(fullname, "wb") as pdf: 
                     pdf.write(r.content)
 
-            except:
-                pass
+        except:
+            pass
