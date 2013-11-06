@@ -3,9 +3,11 @@
 ### How has the field of machine learning changed since 2005?
 
 **Abstract**
+
 I'm planning to investigate how the field of machine learning has evolved over the last 8 years by analyzing the text of all of the available final projects from the Stanford CS229 Machine Learning course (around 1,000 final project reports from the CS229 course covering the period 2005 to 2012). 
 
 **Motivation**
+
 According to Thomas H. Davenport and D.J. Patil, Data Scientist is the "Sexiest Job of the 21st Century" (Harvard Business Review, October 2012). Given the significant amount of interest in the field of data science, I thought it would be interesting (and kind of *meta*) to use the tools I've learned in this data science class to analyze changes in the tools used by students of one of the world's leading machine learning programs.  
 
 While the potential insights could be interesting and possibly *infographicable*, I'm mostly hoping to use this final project as an opportunity to learn more about many of the tools and techniques that we use internally at Science Exchange. Specifically:
