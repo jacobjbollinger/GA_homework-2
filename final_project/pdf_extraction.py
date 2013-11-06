@@ -1,13 +1,16 @@
-import pyPdf
+import pdfminer
+import os
 
-def get_text(path):
-    # Load PDF into pyPDF
-    pdf = pyPdf.PdfFileReader(file(path, "rb"))
-    # Iterate pages
-    content = ""
-    for i in range(0, pdf.getNumPages()):
-        content += pdf.getPage(i).extractText() + "\n"  # Extract text from page and add to content
-    # Collapse whitespace
-    content = " ".join(content.replace(u"\xa0", " ").strip().split())
-    return content
-    
+os.system("pdf2txt.py -o output.txt 'research_2.pdf'")
+
+"""
+for a in range(2005,2013):
+	# go to directory
+	directory = "data/%s" % str(a)
+
+	# for each file in directory
+	#run pdf2txt function outputing to txt
+
+	# add all articles from one year to a single file
+	# separate articles into different chapters
+"""
