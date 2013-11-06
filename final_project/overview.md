@@ -18,23 +18,14 @@ While the potential insights could be interesting and possibly *infographicable*
 
 **Proposed project**
 
-1. Obtain data
+1. **Obtain data**
+Write a script to download and store all of the available final projects from the Stanford CS229 Machine Learning course (Status: *Done, 950 PDFs stored*)
 
-Write a script to download and store all of the available final projects from the Stanford CS229 Machine Learning course
-Status: *Done, 950 PDFs stored*
+2. **Clean and reformat data** 
+Extract text from PDFs using PyPDF2, pdf2txt or something similar and store data in a Redis key-value format (Status: *Started, text extraction using pdf2txt tested*) 
 
-2. Clean and reformat data 
+3. **Perform NLP-style analysis to identify interesting trends**
+Use a number of NLP techniques to analyze the content of the projects (e.g. tokenizing, ngrams, word count). Create a dictionary of machine learning concepts and see how use of machine learning tools and techniques has changed since 2005 (Status: *Not started*)
 
-Extract text from PDFs using PyPDF2, pdf2txt or something similar and store data in a Redis key-value format
-Status: *Started, text extraction using pdf2txt tested* 
-
-3. Perform NLP-style analysis to identify interesting trends
-
-Use a number of NLP techniques to analyze the content of the projects (e.g. tokenizing, ngrams, word count) 
-Create a dictionary of machine learning concepts and see how use of machine learning tools and techniques has changed since 2005
-Status: *Not started*
-
-4. Visualization
-
-Depending on the results of the NLP analysis, use modern visualization tools to showcase 2-3 interesting insights 
-Status: *Not started*
+4. **Visualization**
+Depending on the results of the NLP analysis, use modern visualization tools to showcase 2-3 interesting insights (Status: *Not started*)
