@@ -1,7 +1,22 @@
 import pdfminer
 import os
 
-os.system("pdf2txt.py -o output.txt 'research_2.pdf'")
+
+"""
+for a in range(2005,2013):
+	
+	directory = "data/%s" % str(a)
+
+	for file in directory:
+"""
+
+filename = '"../data/2005/proj2005-chang-DecodingCognitiveStatesFromFMRITimeseries.pdf"'
+output = '../data/2005/proj2005-chang-DecodingCognitiveStatesFromFMRITimeseries.txt'
+os_call = "pdf2txt.py -o %s %s" % (output, filename)
+print os_call
+os.system(os_call)
+
+
 
 """
 for a in range(2005,2013):
