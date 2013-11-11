@@ -1,31 +1,27 @@
-import pdfminer
+# Must be run from root (i.e. final_projects) folder
+
+from time import sleep
 import os
+import pdfminer
 
+for a in range(2012,2013):
 
-"""
-for a in range(2005,2013):
-	
-	directory = "data/%s" % str(a)
+	sleep(1)
+	print "\n...starting %s files" % str(a)
 
-	for file in directory:
-"""
+	directory = "data/pdf/%s" % str(a)
+	files = os.listdir(directory)
 
-filename = '"../data/2005/proj2005-chang-DecodingCognitiveStatesFromFMRITimeseries.pdf"'
-output = '../data/2005/proj2005-chang-DecodingCognitiveStatesFromFMRITimeseries.txt'
-os_call = "pdf2txt.py -o %s %s" % (output, filename)
-print os_call
-os.system(os_call)
+	for f in files:
 
+		input_file = '"' + "data/pdf/%s/%s" % (str(a), f) + '"'
 
+		output = os.path.splitext(os.path.basename(f))[0] + ".txt"
+		output_file = "data/text/%s/%s" % (str(a), output)
 
-"""
-for a in range(2005,2013):
-	# go to directory
-	directory = "data/%s" % str(a)
-
-	# for each file in directory
-	#run pdf2txt function outputing to txt
-
-	# add all articles from one year to a single file
-	# separate articles into different chapters
-"""
+		if ".pdf" in input_file:
+			try:
+				os_call = str("pdf2txt.py -o %s %s" % (output_file, input_file)) 
+				os.system(os_call)
+			except: 
+				pass

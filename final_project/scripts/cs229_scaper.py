@@ -1,3 +1,5 @@
+# Must be run from root (i.e. final_projects) folder
+
 import os
 import re
 from time import sleep
