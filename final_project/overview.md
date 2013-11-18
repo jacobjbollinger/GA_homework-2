@@ -1,3 +1,7 @@
+Comments: This looks really cool. I think the insights gained here would be of general iterest to the community. 
+I suggest also bulding a classifier using the metrics from your NLP analysis to try an predict what year an OOS 
+description was generated.
+
 ## General Assembly Data Science course - Final project
 
 ### How has the field of machine learning changed since 2005?
